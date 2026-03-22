@@ -3,71 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Honda - Hayallerin Gücü</title>
+    <title>Honda | Hayallerin Gücü</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <style>
-        .hero-bg {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
-                        url('https://images.unsplash.com/photo-1594930511394-844b017742d4?auto=format&fit=crop&q=80&w=1920');
-            background-size: cover;
-            background-position: center;
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .honda-red { background-color: #E31837; }
+        .hero-video-bg {
+            position: relative;
+            height: 80vh;
+            background: url('https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?q=80&w=2070') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
+        .overlay { background: rgba(0,0,0,0.5); position: absolute; inset: 0; }
     </style>
 </head>
-<body class="bg-gray-100 font-sans">
+<body class="bg-white text-gray-900">
 
-    <nav class="bg-white shadow-md p-4 sticky top-0 z-50">
-        <div class="container mx-auto flex justify-between items-center">
-            <h1 class="text-2xl font-bold text-red-600 italic">HONDA</h1>
-            <ul class="flex space-x-6 font-semibold">
-                <li><a href="#" class="hover:text-red-600 transition">Modeller</a></li>
-                <li><a href="#" class="hover:text-red-600 transition">Teknoloji</a></li>
-                <li><a href="#" class="hover:text-red-600 transition">İletişim</a></li>
-            </ul>
+    <nav class="flex justify-between items-center px-10 py-6 sticky top-0 bg-white/90 backdrop-blur-md z-50 border-b">
+        <div class="text-3xl font-black tracking-tighter text-red-600">HONDA</div>
+        <div class="hidden md:flex space-x-8 font-medium">
+            <a href="#" class="hover:text-red-600 transition">Modeller</a>
+            <a href="#" class="hover:text-red-600 transition">Motosiklet</a>
+            <a href="#" class="hover:text-red-600 transition">Teknoloji</a>
         </div>
+        <button class="honda-red text-white px-6 py-2 rounded-full font-bold hover:bg-black transition">Test Sürüşü</button>
     </nav>
 
-    <section class="hero-bg h-[500px] flex flex-col justify-center items-center text-center text-white px-4">
-        <h2 class="text-5xl font-extrabold mb-4">Hayallerin Gücü</h2>
-        <p class="text-xl mb-8">Geleceği şekillendiren teknolojilerle tanışın.</p>
-        <button id="cta-button" class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full transition duration-300">
-            Modelleri Keşfet
-        </button>
-    </section>
+    <div class="hero-video-bg">
+        <div class="overlay"></div>
+        <div class="relative z-10 text-center text-white animate__animated animate__fadeInUp">
+            <h1 class="text-7xl font-black mb-4 uppercase italic">Civic Type R</h1>
+            <p class="text-2xl font-light tracking-widest mb-8">Sınırları Zorlamak İçin Tasarlandı</p>
+            <div class="flex space-x-4 justify-center">
+                <button onclick="tikla()" class="honda-red px-10 py-4 text-lg font-bold uppercase tracking-widest hover:scale-105 transition">İncele</button>
+                <button class="bg-white text-black px-10 py-4 text-lg font-bold uppercase tracking-widest hover:bg-gray-200 transition">Fiyat Listesi</button>
+            </div>
+        </div>
+    </div>
 
-    <section class="py-16 container mx-auto text-center">
-        <h3 class="text-3xl font-bold mb-6">Neden Honda?</h3>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="p-6 bg-white rounded-lg shadow-sm border-t-4 border-red-600">
-                <h4 class="font-bold text-xl mb-2">Güvenlik</h4>
-                <p>Honda Sensing teknolojisi ile her an güvendesiniz.</p>
-            </div>
-            <div class="p-6 bg-white rounded-lg shadow-sm border-t-4 border-red-600">
-                <h4 class="font-bold text-xl mb-2">Performans</h4>
-                <p>VTEC motorun efsanevi gücünü hissedin.</p>
-            </div>
-            <div class="p-6 bg-white rounded-lg shadow-sm border-t-4 border-red-600">
-                <h4 class="font-bold text-xl mb-2">Ekonomi</h4>
-                <p>Hibrit teknolojisi ile minimum yakıt, maksimum keyif.</p>
+    <section class="py-20 px-10 container mx-auto">
+        <div class="grid md:grid-cols-2 gap-10 items-center">
+            <img src="https://images.unsplash.com/photo-1592198084033-aade902d1aae?q=80&w=2070" class="rounded-2xl shadow-2xl animate__animated animate__fadeInLeft" alt="Honda">
+            <div class="animate__animated animate__fadeInRight">
+                <h2 class="text-4xl font-bold mb-6">Hibrit Performansın Yeni Çağı</h2>
+                <p class="text-gray-600 text-lg mb-6 text-justify">Honda'nın e:HEV teknolojisi ile tanışın. Hem yakıt tasarrufu sağlayın hem de sürüş keyfinden ödün vermeyin. Şehir içi ve uzun yolculuklarda benzersiz konfor.</p>
+                <ul class="space-y-4 font-semibold">
+                    <li class="flex items-center text-red-600">✓ Akıllı Güvenlik Sistemi</li>
+                    <li class="flex items-center text-red-600">✓ Düşük Emisyon</li>
+                    <li class="flex items-center text-red-600">✓ Kesintisiz Güç</li>
+                </ul>
             </div>
         </div>
     </section>
 
-    <footer class="bg-gray-900 text-white py-8 text-center">
-        <p>&copy; 2026 Honda Web Projem - Tüm hakları saklıdır.</p>
-    </footer>
-
     <script>
-        // Basit bir etkileşim örneği
-        const btn = document.getElementById('cta-button');
-        
-        btn.addEventListener('click', () => {
-            alert('Honda modellerine yönlendiriliyorsunuz! (Bu bir JavaScript uyarısıdır)');
-            btn.innerHTML = "Lütfen Bekleyin...";
-            btn.classList.add('opacity-50');
-        });
-
-        console.log("Honda web sitesi başarıyla yüklendi!");
+        function tikla() {
+            alert("Honda Dünyasına Hoş Geldiniz! Formunuz iletiliyor.");
+            console.log("Kullanıcı incele butonuna bastı.");
+        }
     </script>
 </body>
 </html>
