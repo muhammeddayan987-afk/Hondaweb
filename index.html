@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Honda - Hayallerin Gücü</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .hero-bg {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url('https://images.unsplash.com/photo-1594930511394-844b017742d4?auto=format&fit=crop&q=80&w=1920');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans">
+
+    <nav class="bg-white shadow-md p-4 sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-red-600 italic">HONDA</h1>
+            <ul class="flex space-x-6 font-semibold">
+                <li><a href="#" class="hover:text-red-600 transition">Modeller</a></li>
+                <li><a href="#" class="hover:text-red-600 transition">Teknoloji</a></li>
+                <li><a href="#" class="hover:text-red-600 transition">İletişim</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero-bg h-[500px] flex flex-col justify-center items-center text-center text-white px-4">
+        <h2 class="text-5xl font-extrabold mb-4">Hayallerin Gücü</h2>
+        <p class="text-xl mb-8">Geleceği şekillendiren teknolojilerle tanışın.</p>
+        <button id="cta-button" class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full transition duration-300">
+            Modelleri Keşfet
+        </button>
+    </section>
+
+    <section class="py-16 container mx-auto text-center">
+        <h3 class="text-3xl font-bold mb-6">Neden Honda?</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="p-6 bg-white rounded-lg shadow-sm border-t-4 border-red-600">
+                <h4 class="font-bold text-xl mb-2">Güvenlik</h4>
+                <p>Honda Sensing teknolojisi ile her an güvendesiniz.</p>
+            </div>
+            <div class="p-6 bg-white rounded-lg shadow-sm border-t-4 border-red-600">
+                <h4 class="font-bold text-xl mb-2">Performans</h4>
+                <p>VTEC motorun efsanevi gücünü hissedin.</p>
+            </div>
+            <div class="p-6 bg-white rounded-lg shadow-sm border-t-4 border-red-600">
+                <h4 class="font-bold text-xl mb-2">Ekonomi</h4>
+                <p>Hibrit teknolojisi ile minimum yakıt, maksimum keyif.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-8 text-center">
+        <p>&copy; 2026 Honda Web Projem - Tüm hakları saklıdır.</p>
+    </footer>
+
+    <script>
+        // Basit bir etkileşim örneği
+        const btn = document.getElementById('cta-button');
+        
+        btn.addEventListener('click', () => {
+            alert('Honda modellerine yönlendiriliyorsunuz! (Bu bir JavaScript uyarısıdır)');
+            btn.innerHTML = "Lütfen Bekleyin...";
+            btn.classList.add('opacity-50');
+        });
+
+        console.log("Honda web sitesi başarıyla yüklendi!");
+    </script>
+</body>
+</html>
